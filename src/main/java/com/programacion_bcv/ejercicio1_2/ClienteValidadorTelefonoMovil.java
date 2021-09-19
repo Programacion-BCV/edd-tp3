@@ -1,15 +1,11 @@
-package com.programacion_bcv.ejercicio1;
+package com.programacion_bcv.ejercicio1_2;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.regex.*;
 
-public class ValidadorTelefonoMovil {
+public class ClienteValidadorTelefonoMovil {
     public static void main(String[] args) {
         List<String> telefonos = new ArrayList<>();
-        Pattern p = Pattern.compile("^((\\(|\\+)?([5][4]|[5][4][9])?[0]?[3][4][5]\\)?\\s?([1][5])?\\d{7})$");
-        Matcher m;
-
         telefonos.add("(0345) 154123456");
         telefonos.add("+5493454123456");
         telefonos.add("3454123456");
@@ -17,10 +13,12 @@ public class ValidadorTelefonoMovil {
         telefonos.add("34564123456");
 
         for (String telefono : telefonos) {
-            m = p.matcher(telefono);
-            System.out.println(m.matches());
+            try {
+                ValidadorTelefonoMovil v1 = new ValidadorTelefonoMovil(telefono);
+                System.out.println(telefono + " es un numero valido");
+            } catch (Exception exc) {
+                System.out.println(exc.getMessage());
+            }
         }
-
     }
-
 }

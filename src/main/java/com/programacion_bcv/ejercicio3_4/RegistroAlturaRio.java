@@ -2,12 +2,12 @@ package com.programacion_bcv.ejercicio3_4;
 
 public class RegistroAlturaRio {
     private String puerto;
-    private String rio;
+    private Rio rio;
     private String ultimoRegistro;
     private String fechaHora;
-    private String estado;
+    private EstadoEnum estado;
 
-    public RegistroAlturaRio(String puerto, String rio, String ultimoRegistro, String fechaHora, String estado) {
+    public RegistroAlturaRio(String puerto, Rio rio, String ultimoRegistro, String fechaHora, EstadoEnum estado) {
         this.puerto = puerto;
         this.rio = rio;
         this.ultimoRegistro = ultimoRegistro;
@@ -23,11 +23,11 @@ public class RegistroAlturaRio {
         this.puerto = puerto;
     }
 
-    public String getRio() {
+    public Rio getRio() {
         return rio;
     }
 
-    public void setRio(String rio) {
+    public void setRio(Rio rio) {
         this.rio = rio;
     }
 
@@ -47,14 +47,10 @@ public class RegistroAlturaRio {
         this.fechaHora = fechaHora;
     }
 
-    public String getEstado() {
+    public EstadoEnum getEstado() {
         return estado;
     }
-
-    public void setEstado(String estado) {
-        this.estado = estado;
-    }
-
+    
     @Override
     public String toString() {
         return "RegistroAlturaRio{" +

@@ -4,6 +4,7 @@ import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.File;
 
+import java.nio.charset.StandardCharsets;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -17,20 +18,17 @@ public class ClientePrefectura {
         String auxFechaHora = "";
         String auxEstado = "";
 
-        Pattern puerto = Pattern.compile("^(.*Pue.*>(.+)<.*)$");
-        Pattern rio = Pattern.compile("^(.*Río.*>(.+)<.*)$");
-        Pattern ultimoRecurso = Pattern.compile("^(.*Ult.*>(.+)<.*)$");
-        Pattern fechaHora = Pattern.compile("^(.*Fecha H.*>(.+)</b.*)$");
-        Pattern estado = Pattern.compile("^(.*Est.*>(.+)<.*)$");
+
+        Pattern patron = Pattern.compile("^(.*(Pue|Río|Ult|Fecha H|Est).*>(.+)(?<!</b>)<.*)$");
 
         Matcher match;
 
-        File file = null;
+        File file;
         FileReader fileReader = null;
-        BufferedReader bufferedReader = null;
+        BufferedReader bufferedReader;
         try {
             file = new File("src/main/java/com/programacion_bcv/ejercicio3_4/contenidosweb-prefecturanaval.html");
-            fileReader = new FileReader(file);
+            fileReader = new FileReader(file, StandardCharsets.UTF_8);
             bufferedReader = new BufferedReader(fileReader);
 
             String linea;
@@ -39,37 +37,37 @@ public class ClientePrefectura {
             while ((linea = bufferedReader.readLine()) != null) {
                 switch (contadorObjeto) {
                     case 0 -> {
-                        match = puerto.matcher(linea);
+                        match = patron.matcher(linea);
                         if (match.matches()) {
-                            auxPuerto = match.group(2);
+                            auxPuerto = match.group(3);
                             contadorObjeto++;
                         }
                     }
                     case 1 -> {
-                        match = rio.matcher(linea);
+                        match = patron.matcher(linea);
                         if (match.matches()) {
-                            auxRio = match.group(2);
+                            auxRio = match.group(3);
                             contadorObjeto++;
                         }
                     }
                     case 2 -> {
-                        match = ultimoRecurso.matcher(linea);
+                        match = patron.matcher(linea);
                         if (match.matches()) {
-                            auxUltimoRecurso = match.group(2);
+                            auxUltimoRecurso = match.group(3);
                             contadorObjeto++;
                         }
                     }
                     case 3 -> {
-                        match = fechaHora.matcher(linea);
+                        match = patron.matcher(linea);
                         if (match.matches()) {
-                            auxFechaHora = match.group(2);
+                            auxFechaHora = match.group(3);
                             contadorObjeto++;
                         }
                     }
                     case 4 -> {
-                        match = estado.matcher(linea);
+                        match = patron.matcher(linea);
                         if (match.matches()) {
-                            auxEstado = match.group(2);
+                            auxEstado = match.group(3);
                             contadorObjeto++;
                         }
                     }

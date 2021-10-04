@@ -1,17 +1,6 @@
-package com.programacion_bcv.ejercicio5;
+package com.programacion_bcv.ejercicio5_6_7;
 
 public interface IteradorListaDobleInterfaz<T> {
-    boolean isEmpty();
-
-    int size();
-
-    Object get(int index);
-
-    void add(Object element);
-
-    void remove(Object element);
-
-    IteradorListaDobleInterfaz<T> iterador();
 
     /**
      * Indica si existe un nodo a continuación del actual.

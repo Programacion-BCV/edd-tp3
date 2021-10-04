@@ -1,11 +1,15 @@
-package com.programacion_bcv.ejercicio5;
+package com.programacion_bcv.ejercicio5_6_7;
 
-public class NodoLista<T> {
+public class NodoListaDoble<T> {
     protected T elemento;
-    protected NodoLista<T> siguiente;
-    protected NodoLista<T> anterior;
+    protected NodoListaDoble<T> siguiente;
+    protected NodoListaDoble<T> anterior;
 
-    public NodoLista(T elemento, NodoLista<T> siguiente, NodoLista<T> anterior) {
+    public NodoListaDoble(T element) {
+        this(element, null, null);
+    }
+
+    public NodoListaDoble(T elemento, NodoListaDoble<T> siguiente, NodoListaDoble<T> anterior) {
         this.elemento = elemento;
         this.siguiente = siguiente;
         this.anterior = anterior;
@@ -19,19 +23,19 @@ public class NodoLista<T> {
         this.elemento = elemento;
     }
 
-    public NodoLista<T> getSiguiente() {
+    public NodoListaDoble<T> getSiguiente() {
         return siguiente;
     }
 
-    public void setSiguiente(NodoLista<T> siguiente) {
+    public void setSiguiente(NodoListaDoble<T> siguiente) {
         this.siguiente = siguiente;
     }
 
-    public NodoLista<T> getAnterior() {
+    public NodoListaDoble<T> getAnterior() {
         return anterior;
     }
 
-    public void setAnterior(NodoLista<T> anterior) {
+    public void setAnterior(NodoListaDoble<T> anterior) {
         this.anterior = anterior;
     }
 

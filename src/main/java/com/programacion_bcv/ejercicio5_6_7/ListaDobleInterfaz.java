@@ -1,4 +1,4 @@
-package com.programacion_bcv.ejercicio5;
+package com.programacion_bcv.ejercicio5_6_7;
 
 public interface ListaDobleInterfaz<T> {
     /**

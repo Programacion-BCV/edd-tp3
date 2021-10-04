@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class ClienteValidadorTelefonoMovil {
+
     public static void main(String[] args) {
         List<String> telefonos = new ArrayList<>();
         telefonos.add("(0345) 154123456");

@@ -1,33 +1,40 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-package com.programacion_bcv.ejercicio8_9;
+package com.programacion_bcv.ejercicio8_y_9;
 
-/**
- *
- * @author Pc-Ramiro
- */
 public class ClientePilaExt {
-
     public static void main(String[] args) {
-        PilaExtImp pila1 = new PilaExtImp();
-        pila1.push(6);
-        pila1.push(7);
-        pila1.push(8);
-        pila1.push(9);
-        pila1.push(10);
-        
-        PilaPorEnlaces<Integer> pilaParam = new PilaPorEnlaces();
-        pilaParam.push(1);
-        pilaParam.push(2);
-        pilaParam.push(3);
-        pilaParam.push(4);
-        pilaParam.push(5);
+        PilaExtImp<Integer> pilaMain = new PilaExtImp<>();
+        PilaExtImp<Integer> pilaAux = new PilaExtImp<>();
+        PilaExtImp<Integer> pilaAux2 = new PilaExtImp<>();
 
-        System.out.println("Pila por Enlacess (completa): " + pilaParam.toString());
-        pila1.invertirOrden();
-        System.out.println("Pila por Enlaces (completa): " + PilaExtInterfaz.pilaEstructura.toString());
+        pilaMain.push(2);
+        pilaMain.push(4);
+        pilaMain.push(6);
+        pilaMain.push(8);
+        pilaMain.push(10);
+        pilaMain.push(12);
+        pilaMain.push(14);
+
+        System.out.println(pilaMain);
+
+        pilaAux.push(1);
+        pilaAux.push(3);
+        pilaAux.push(5);
+        pilaAux.push(7);
+        pilaAux.push(9);
+        pilaAux.push(11);
+        pilaAux.push(13);
+
+        pilaAux2.push(100);
+        pilaAux2.push(1000);
+
+        System.out.println(pilaAux);
+
+        pilaMain.intercalar(pilaAux);
+        System.out.println(pilaMain);
+
+        pilaMain.agregarTodos(pilaAux2);
+        System.out.println(pilaMain);
+
+
     }
 }

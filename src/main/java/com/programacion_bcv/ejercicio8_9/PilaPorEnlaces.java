@@ -1,86 +1,49 @@
-package com.programacion_bcv.ejercicio8_9;
+package com.programacion_bcv.ejercicio8_y_9;
 
 import ar.edu.uner.fcad.ed.edlineales.NodoLista;
 
-public class PilaPorEnlaces<T> implements Pila<T> {
-
-    protected NodoLista<T> tope;
+public class PilaPorEnlaces<T> {
+    protected NodoPila<T> tope;
 
     public PilaPorEnlaces() {
-        makeEmpty();
+        this.makeEmpty();
     }
 
-    /**
-     * Indica si la estructura está vacía
-     *
-     * @return
-     */
-    @Override
     public boolean isEmpty() {
-        return tope == null;
+        return this.tope == null;
     }
 
-    /**
-     * Indica si la estructura está llena
-     *
-     * @return
-     */
-    @Override
     public boolean isFull() {
         return false;
     }
 
-    /**
-     * Retorna el elemento ubicado en la posición tope de la pila.
-     *
-     * @return
-     */
-    @Override
-    public T top() {
-        if (isEmpty()) {
-            return null;
-        }
-
-        return tope.getElemento();
+    public void makeEmpty() {
+        this.tope = null;
     }
 
-    /**
-     * Quita la posición ubicada en el tope de la pila.
-     */
-    @Override
+    public T top() {
+        return (isEmpty() ? null : tope.getElemento());
+    }
+
     public void pop() {
         this.tope = this.tope.getSiguiente();
     }
 
-    /**
-     * Agrega el elemento pasado por parámetro en el tope de la pila.
-     *
-     * @param x
-     */
-    @Override
-    public void push(T x) {
+    public void push(T elemento) {
         if (isEmpty()) {
-            this.tope = new NodoLista(x);
+            this.tope = new NodoPila<>(elemento);
         } else {
-            NodoLista<T> nuevoNodo = new NodoLista(x);
-            nuevoNodo.setSiguiente(tope);
+            NodoPila<T> nuevoNodo = new NodoPila<>(elemento);
+            nuevoNodo.setSiguiente(this.tope);
             this.tope = nuevoNodo;
         }
-    }
-
-    /**
-     * Vacía la estructura
-     */
-    @Override
-    public final void makeEmpty() {
-        this.tope = null;
     }
 
     @Override
     public String toString() {
         String resultado = "";
 
-        NodoLista<T> nodoActual = tope;
+        NodoPila<T> nodoActual = tope;
         while (nodoActual != null) {
             resultado += ", " + nodoActual.toString();
             nodoActual = nodoActual.getSiguiente();

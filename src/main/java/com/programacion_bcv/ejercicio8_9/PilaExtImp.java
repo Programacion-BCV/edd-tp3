@@ -1,39 +1,68 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-package com.programacion_bcv.ejercicio8_9;
+package com.programacion_bcv.ejercicio8_y_9;
 
-import ar.edu.uner.fcad.ed.edlineales.NodoLista;
+import com.programacion_bcv.ejercicio10_11.NodoCola;
 
-/**
- *
- * @author Pc-Ramiro
- */
-public class PilaExtImp extends PilaPorEnlaces implements  PilaExtInterfaz {
-    PilaPorEnlaces<Integer> aux = new PilaPorEnlaces();
-    @Override
-    public void intercalar(PilaPorEnlaces pilaParam) {
+public class PilaExtImp<T> extends PilaPorEnlaces<T> implements PilaExtInterfaz<T> {
+
+    public PilaExtImp() {
+        super();
     }
 
     @Override
-    public void agregarTodos(PilaPorEnlaces pilaParam) {
-       while(!pilaParam.isEmpty()){
-                 
-       }
+    public void intercalar(PilaPorEnlaces<T> pilaParam) {
+        PilaExtImp<T> nuevaPila = new PilaExtImp<>();
+
+        while (!(this.isEmpty()) || !(pilaParam.isEmpty())) {
+
+            if (!(this.isEmpty())) {
+                nuevaPila.push(this.top());
+                this.pop();
+            }
+            if (!(pilaParam.isEmpty())) {
+                nuevaPila.push(pilaParam.top());
+                pilaParam.pop();
+            }
+        }
+        this.tope = nuevaPila.tope;
     }
 
     @Override
-    public String invertirOrden() {
-   NodoLista temporal = tope;
-   PilaPorEnlaces  cc = new PilaPorEnlaces();
-   while (!isEmpty()){
-       cc.push(tope.getElemento());
-       tope.getSiguiente();
-   }
-   tope = temporal;
-   return cc.toString();
+    public void agregarTodos(PilaPorEnlaces<T> pilaParam) {
+
+        while (!(pilaParam.isEmpty())) {
+            this.push(pilaParam.top());
+            pilaParam.pop();
+
+        }
     }
-    
+
+    @Override
+    public void invertirOrden() {
+        PilaExtImp<T> nuevaPila = new PilaExtImp<>();
+
+        // while (this.isEmpty())
+
+    }
+
+    @Override
+    public String toString() {
+        StringBuilder retorno = new StringBuilder("");
+
+        if (isEmpty()) {
+            return "Cola vacia";
+        } else {
+            NodoPila<T> nodo = this.tope;
+
+            while (nodo != null) {
+                retorno.append("[");
+                retorno.append(nodo);
+                retorno.append("]");
+                nodo = nodo.getSiguiente();
+                if (nodo != null) {
+                    retorno.append(",");
+                }
+            }
+            return retorno.toString();
+        }
+    }
 }

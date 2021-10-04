@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class ListaRios {
-    private List<RegistroAlturaRio> registroRios;
+    private final List<RegistroAlturaRio> registroRios;
 
     public ListaRios() {
         this.registroRios = new ArrayList<>();

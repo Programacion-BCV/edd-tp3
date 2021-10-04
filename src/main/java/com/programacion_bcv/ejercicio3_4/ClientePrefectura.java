@@ -10,14 +10,13 @@ import java.util.regex.Pattern;
 
 public class ClientePrefectura {
     public static void main(String[] args) {
-        ListaRios lista = new ListaRios();
+        ListaRios listaRios = new ListaRios();
 
         String auxPuerto = "";
         String auxRio = "";
         String auxUltimoRecurso = "";
         String auxFechaHora = "";
         String auxEstado = "";
-
 
         Pattern patron = Pattern.compile("^(.*(Pue|Río|Ult|Fecha H|Est).*>(.+)(?<!</b>)<.*)$");
 
@@ -73,13 +72,22 @@ public class ClientePrefectura {
                     }
                 }
                 if (contadorObjeto == 5) {
-                    lista.add(new RegistroAlturaRio(auxPuerto, new Rio(auxRio), auxUltimoRecurso, auxFechaHora, (auxEstado.equals("CRECE") ? EstadoEnum.CRECE : (auxEstado.equals("BAJA") ? EstadoEnum.BAJA : (auxEstado.equals("ESTAC.") ? EstadoEnum.ESTAC : EstadoEnum.SE)))));
+                    listaRios.add(new RegistroAlturaRio(auxPuerto, new Rio(auxRio), auxUltimoRecurso, auxFechaHora, (auxEstado.equals("CRECE") ? EstadoEnum.CRECE : (auxEstado.equals("BAJA") ? EstadoEnum.BAJA : (auxEstado.equals("ESTAC.") ? EstadoEnum.ESTAC : EstadoEnum.SE)))));
                     contadorObjeto = 0;
                 }
             }
-            System.out.println(lista.filtrarPorPuerto("FEDERACION"));
-            System.out.println(lista.filtrarPorRio(new Rio("PARANA")));
-            System.out.println(lista.filtrarPorEstado(EstadoEnum.CRECE));
+            System.out.println("***************> Lista Rios <***************");
+            System.out.println(listaRios);
+            System.out.println("****************************************");
+            System.out.println("***************> Lista Rios por Puerto<***************");
+            System.out.println(listaRios.filtrarPorPuerto("FEDERACION"));
+            System.out.println("****************************************");
+            System.out.println("***************> Lista Rios por Rio<***************");
+            System.out.println(listaRios.filtrarPorRio(new Rio("PARANA")));
+            System.out.println("****************************************");
+            System.out.println("***************> Lista Rios por Estado<***************");
+            System.out.println(listaRios.filtrarPorEstado(EstadoEnum.CRECE));
+            System.out.println("****************************************");
         } catch (Exception exc) {
             exc.printStackTrace();
         } finally {

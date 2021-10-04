@@ -1,6 +1,7 @@
 package com.programacion_bcv.ejercicio8_9;
 
 import ar.edu.uner.fcad.ed.edlineales.NodoLista;
+import ar.edu.uner.fcad.ed.edlineales.pilas.PilaPorEnlaces;
 
 public class PilaExtImp<T> extends PilaPorEnlaces<T> implements PilaExtInterfaz<T> {
 
@@ -11,7 +12,6 @@ public class PilaExtImp<T> extends PilaPorEnlaces<T> implements PilaExtInterfaz<
     @Override
     public void intercalar(PilaPorEnlaces<T> pilaParam) {
         PilaExtImp<T> nuevaPila = new PilaExtImp<>();
-        NodoLista<T> nodo=new NodoLista<>(null);
         while (!(this.isEmpty()) || !(pilaParam.isEmpty())) {
 
             if (!(this.isEmpty())) {
@@ -40,29 +40,32 @@ public class PilaExtImp<T> extends PilaPorEnlaces<T> implements PilaExtInterfaz<
     public void invertirOrden() {
         PilaExtImp<T> nuevaPila = new PilaExtImp<>();
 
-        // while (this.isEmpty())
-
+        while (!(this.isEmpty())){
+            nuevaPila.push(this.top());
+            this.pop();
+        }
+        this.tope=nuevaPila.tope;
     }
 
     @Override
     public String toString() {
-        StringBuilder retorno = new StringBuilder("");
+        String retorno = "";
 
         if (isEmpty()) {
             return "Cola vacia";
         } else {
-            NodoPila<T> nodo = this.tope;
+            NodoLista<T> nodo = this.tope;
 
             while (nodo != null) {
-                retorno.append("[");
-                retorno.append(nodo);
-                retorno.append("]");
+
+                retorno+=nodo;
+
                 nodo = nodo.getSiguiente();
                 if (nodo != null) {
-                    retorno.append(",");
+                    retorno+=",";
                 }
             }
-            return retorno.toString();
+            return retorno;
         }
     }
 }

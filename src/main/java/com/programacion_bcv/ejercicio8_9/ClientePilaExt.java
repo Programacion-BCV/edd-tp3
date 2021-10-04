@@ -14,8 +14,6 @@ public class ClientePilaExt {
         pilaMain.push(12);
         pilaMain.push(14);
 
-        System.out.println(pilaMain);
-
         pilaAux.push(1);
         pilaAux.push(3);
         pilaAux.push(5);
@@ -27,14 +25,20 @@ public class ClientePilaExt {
         pilaAux2.push(100);
         pilaAux2.push(1000);
 
-        System.out.println(pilaAux);
-
+        System.out.println("***************> Pila <***************");
+        System.out.println(pilaMain);
+        System.out.println("****************************************");
+        System.out.println("***************> Intercalar Pilas <***************");
         pilaMain.intercalar(pilaAux);
         System.out.println(pilaMain);
-
+        System.out.println("****************************************");
+        System.out.println("***************> Agregar un elementos de una pila a otra <***************");
         pilaMain.agregarTodos(pilaAux2);
         System.out.println(pilaMain);
-
-
+        System.out.println("****************************************");
+        System.out.println("***************> Invertir elementos de la pila <***************");
+        pilaMain.invertirOrden();
+        System.out.println(pilaMain);
+        System.out.println("****************************************");
     }
 }

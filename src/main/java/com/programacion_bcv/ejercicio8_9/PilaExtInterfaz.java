@@ -1,5 +1,7 @@
 package com.programacion_bcv.ejercicio8_9;
 
+import ar.edu.uner.fcad.ed.edlineales.pilas.PilaPorEnlaces;
+
 public interface PilaExtInterfaz<T> {
     /**
      * Mezcla los elementos la estructura con los de pilaParam.

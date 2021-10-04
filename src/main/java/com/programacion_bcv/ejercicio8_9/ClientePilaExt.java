@@ -1,4 +1,4 @@
-package com.programacion_bcv.ejercicio8_y_9;
+package com.programacion_bcv.ejercicio8_9;
 
 public class ClientePilaExt {
     public static void main(String[] args) {

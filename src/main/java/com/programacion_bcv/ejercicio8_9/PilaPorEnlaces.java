@@ -1,6 +1,6 @@
-package com.programacion_bcv.ejercicio8_y_9;
+package com.programacion_bcv.ejercicio8_9;
 
-import ar.edu.uner.fcad.ed.edlineales.NodoLista;
+
 
 public class PilaPorEnlaces<T> {
     protected NodoPila<T> tope;

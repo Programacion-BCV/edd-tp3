@@ -1,12 +1,22 @@
-C:\Users\Pc-Ramiro\Desktop\FACULTAD\Estructura de Datos\TP3\edd-tp3\src\main\java\com\programacion_bcv\ejercicio3_4\EstadoEnum.java
-C:\Users\Pc-Ramiro\Desktop\FACULTAD\Estructura de Datos\TP3\edd-tp3\src\main\java\com\programacion_bcv\ejercicio3_4\RegistroAlturaRio.java
-C:\Users\Pc-Ramiro\Desktop\FACULTAD\Estructura de Datos\TP3\edd-tp3\src\main\java\com\programacion_bcv\ejercicio8_9\Pila.java
-C:\Users\Pc-Ramiro\Desktop\FACULTAD\Estructura de Datos\TP3\edd-tp3\src\main\java\com\programacion_bcv\ejercicio8_9\PilaPorEnlaces.java
-C:\Users\Pc-Ramiro\Desktop\FACULTAD\Estructura de Datos\TP3\edd-tp3\src\main\java\com\programacion_bcv\ejercicio8_9\PilaExtInterfaz.java
-C:\Users\Pc-Ramiro\Desktop\FACULTAD\Estructura de Datos\TP3\edd-tp3\src\main\java\com\programacion_bcv\ejercicio1_2\ClienteValidadorTelefonoMovil.java
-C:\Users\Pc-Ramiro\Desktop\FACULTAD\Estructura de Datos\TP3\edd-tp3\src\main\java\com\programacion_bcv\ejercicio3_4\ClientePrefectura.java
-C:\Users\Pc-Ramiro\Desktop\FACULTAD\Estructura de Datos\TP3\edd-tp3\src\main\java\com\programacion_bcv\ejercicio3_4\Rio.java
-C:\Users\Pc-Ramiro\Desktop\FACULTAD\Estructura de Datos\TP3\edd-tp3\src\main\java\com\programacion_bcv\ejercicio8_9\ClientePilaExt.java
-C:\Users\Pc-Ramiro\Desktop\FACULTAD\Estructura de Datos\TP3\edd-tp3\src\main\java\com\programacion_bcv\ejercicio3_4\ListaRios.java
-C:\Users\Pc-Ramiro\Desktop\FACULTAD\Estructura de Datos\TP3\edd-tp3\src\main\java\com\programacion_bcv\ejercicio1_2\ValidadorTelefonoMovil.java
-C:\Users\Pc-Ramiro\Desktop\FACULTAD\Estructura de Datos\TP3\edd-tp3\src\main\java\com\programacion_bcv\ejercicio8_9\PilaExtImp.java
+/home/confaa/REPOS/edd-tp3/src/main/java/com/programacion_bcv/ejercicio5/NodoLista.java
+/home/confaa/REPOS/edd-tp3/src/main/java/com/programacion_bcv/ejercicio3_4/RegistroAlturaRio.java
+/home/confaa/REPOS/edd-tp3/src/main/java/com/programacion_bcv/ejercicio3_4/ClientePrefectura.java
+/home/confaa/REPOS/edd-tp3/src/main/java/com/programacion_bcv/ejercicio3_4/Rio.java
+/home/confaa/REPOS/edd-tp3/src/main/java/com/programacion_bcv/ejercicio5/NodoListaBusqueda.java
+/home/confaa/REPOS/edd-tp3/src/main/java/com/programacion_bcv/ejercicio5/ClienteListaDoble.java
+/home/confaa/REPOS/edd-tp3/src/main/java/com/programacion_bcv/ejercicio8_9/PilaPorEnlaces.java
+/home/confaa/REPOS/edd-tp3/src/main/java/com/programacion_bcv/ejercicio10_11/ColaAleatoriaInterfaz.java
+/home/confaa/REPOS/edd-tp3/src/main/java/com/programacion_bcv/ejercicio1_2/ValidadorTelefonoMovil.java
+/home/confaa/REPOS/edd-tp3/src/main/java/com/programacion_bcv/ejercicio10_11/NodoCola.java
+/home/confaa/REPOS/edd-tp3/src/main/java/com/programacion_bcv/ejercicio5/ListaDobleInterfaz.java
+/home/confaa/REPOS/edd-tp3/src/main/java/com/programacion_bcv/ejercicio3_4/ListaRios.java
+/home/confaa/REPOS/edd-tp3/src/main/java/com/programacion_bcv/ejercicio8_9/ClientePilaExt.java
+/home/confaa/REPOS/edd-tp3/src/main/java/com/programacion_bcv/ejercicio10_11/ColaAleatoria.java
+/home/confaa/REPOS/edd-tp3/src/main/java/com/programacion_bcv/ejercicio5/IteradorListaDobleInterfaz.java
+/home/confaa/REPOS/edd-tp3/src/main/java/com/programacion_bcv/ejercicio8_9/PilaExtImp.java
+/home/confaa/REPOS/edd-tp3/src/main/java/com/programacion_bcv/ejercicio5/IteradorListaDoble.java
+/home/confaa/REPOS/edd-tp3/src/main/java/com/programacion_bcv/ejercicio10_11/ClienteColaAleatoria.java
+/home/confaa/REPOS/edd-tp3/src/main/java/com/programacion_bcv/ejercicio1_2/ClienteValidadorTelefonoMovil.java
+/home/confaa/REPOS/edd-tp3/src/main/java/com/programacion_bcv/ejercicio8_9/NodoPila.java
+/home/confaa/REPOS/edd-tp3/src/main/java/com/programacion_bcv/ejercicio3_4/EstadoEnum.java
+/home/confaa/REPOS/edd-tp3/src/main/java/com/programacion_bcv/ejercicio8_9/PilaExtInterfaz.java

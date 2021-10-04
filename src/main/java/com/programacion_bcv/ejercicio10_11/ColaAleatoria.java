@@ -1,8 +1,10 @@
 package com.programacion_bcv.ejercicio10_11;
 
+import ar.edu.uner.fcad.ed.edlineales.NodoLista;
+
 public class ColaAleatoria<T> implements ColaAleatoriaInterfaz<T> {
-    protected NodoCola<T> front;
-    protected NodoCola<T> back;
+    protected NodoLista<T> front;
+    protected NodoLista<T> back;
     protected int capacidad;
 
     public ColaAleatoria() {
@@ -21,7 +23,7 @@ public class ColaAleatoria<T> implements ColaAleatoriaInterfaz<T> {
 
     @Override
     public T random() {
-        NodoCola<T> puntero;
+        NodoLista<T> puntero;
 
         int contador = 0;
         int numRandom = this.genRandom();
@@ -43,8 +45,8 @@ public class ColaAleatoria<T> implements ColaAleatoriaInterfaz<T> {
 
     @Override
     public void removeRandom() {
-        NodoCola<T> puntero;
-        NodoCola<T> punteroPrevio;
+        NodoLista<T> puntero;
+        NodoLista<T> punteroPrevio;
         int numRandom = this.genRandom();
         int contador = 0;
         if (!isEmpty()) {
@@ -67,7 +69,7 @@ public class ColaAleatoria<T> implements ColaAleatoriaInterfaz<T> {
 
     @Override
     public void enqueue(T elemento) {
-        NodoCola<T> nuevoNodo = new NodoCola<>(elemento);
+        NodoLista<T> nuevoNodo = new NodoLista<>(elemento);
 
         if (isEmpty()) {
             this.front = nuevoNodo;
@@ -92,23 +94,21 @@ public class ColaAleatoria<T> implements ColaAleatoriaInterfaz<T> {
 
     @Override
     public String toString() {
-        StringBuilder retorno = new StringBuilder("");
+        String retorno = "";
 
         if (isEmpty()) {
             return "Cola vacia";
         } else {
-            NodoCola<T> nodo = this.front;
+            NodoLista<T> nodo = this.front;
 
             while (nodo != null) {
-                retorno.append("[");
-                retorno.append(nodo);
-                retorno.append("]");
+                retorno+=nodo;
                 nodo = nodo.getSiguiente();
                 if (nodo != null) {
-                    retorno.append(",");
+                    retorno+=",";
                 }
             }
-            return retorno.toString();
+            return retorno;
         }
     }
 }

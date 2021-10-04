@@ -1,6 +1,6 @@
-package com.programacion_bcv.ejercicio8_y_9;
+package com.programacion_bcv.ejercicio8_9;
 
-import com.programacion_bcv.ejercicio10_11.NodoCola;
+import ar.edu.uner.fcad.ed.edlineales.NodoLista;
 
 public class PilaExtImp<T> extends PilaPorEnlaces<T> implements PilaExtInterfaz<T> {
 
@@ -11,7 +11,7 @@ public class PilaExtImp<T> extends PilaPorEnlaces<T> implements PilaExtInterfaz<
     @Override
     public void intercalar(PilaPorEnlaces<T> pilaParam) {
         PilaExtImp<T> nuevaPila = new PilaExtImp<>();
-
+        NodoLista<T> nodo=new NodoLista<>(null);
         while (!(this.isEmpty()) || !(pilaParam.isEmpty())) {
 
             if (!(this.isEmpty())) {

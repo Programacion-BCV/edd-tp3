@@ -12,15 +12,11 @@ public class ClienteListaDoble {
             lista.add(6);
 
             System.out.println("Lista:" + lista);
-            System.out.println(lista.size());
+            System.out.println("¿La lista esta vacía? "+ lista.isEmpty());
+            System.out.println("Tamanio de la lista: " + lista.size());
+            System.out.println("Removiendo el número 6");
             lista.remove(6);
-            System.out.println("Lista:" + lista);
-            lista.get(3);
-            int i = 0;
-            IteradorListaDoble<Integer> iterador = new IteradorListaDoble<>();
-            while (iterador.existeSiguiente()) {
-                System.out.println("Posición " + i++ + ": " + iterador.siguiente());
-            }
+            System.out.println("Lista sin el número 6: " + lista);
         } catch (Exception ex) {
             System.err.println(ex.toString());
         }

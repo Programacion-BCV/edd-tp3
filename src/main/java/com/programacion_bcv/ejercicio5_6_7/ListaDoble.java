@@ -3,7 +3,6 @@ package com.programacion_bcv.ejercicio5_6_7;
 
 public class ListaDoble<T> implements ListaDobleInterfaz<T> {
 
-    protected NodoListaDoble<T> header;
     protected NodoListaDoble<T> inicio;
     protected NodoListaDoble<T> fin;
     private int contador;
